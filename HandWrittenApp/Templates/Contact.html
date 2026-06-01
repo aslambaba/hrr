@@ -1,0 +1,82 @@
+{% extends 'Index.html' %}
+{%load static%}
+
+{% block start %}
+<div class="contact-form-container p-4 p-md-5">
+  <div class="card shadow-lg border-0">
+    <div class="card-body p-4 p-md-5">
+      <h1 class="card-title text-center text-primary mb-4">Contact</h1>
+      <p class="text-muted mb-5">
+        We'd love to hear from you! Send us a message using the form below.
+      </p>
+
+      <form action="#" method="POST">
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nameInput"
+            name="name"
+            placeholder="Your Full Name"
+            required
+          />
+          <div class="invalid-feedback">Please provide your name.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="emailInput"
+            name="email"
+            placeholder="name@example.com"
+            required
+          />
+          <div class="invalid-feedback">
+            Please provide a valid email address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="subjectInput" class="form-label">Subject</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subjectInput"
+            name="subject"
+            placeholder="I have a question about..."
+            required
+          />
+          <div class="invalid-feedback">Please provide a subject.</div>
+        </div>
+
+        <div class="mb-4">
+          <label for="messageTextarea" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="messageTextarea"
+            name="message"
+            rows="5"
+            placeholder="Type your message here..."
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please enter your message.</div>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="text-center mt-4 text-muted">
+    <p class="mb-1">Or call us at: 03090097934</p>
+    <p class="mb-0">Visit us at: Bahawalpur, Punjab, Pakistan</p>
+  </div>
+</div>
+{% endblock start %}

@@ -1,0 +1,124 @@
+/* ================================
+   Global Styles
+================================ */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* ================================
+     Hero Section
+  ================================ */
+  .hero-section {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    padding: 80px 20px;
+    border-radius: 15px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+  }
+  
+  .hero-section .btn-success {
+    background-color: #38a169;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-section .btn-success:hover {
+    background-color: #2f855a;
+    transform: translateY(-3px);
+  }
+  
+  /* ================================
+     About Section
+  ================================ */
+  .about-section {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .about-section h3 {
+    color: #5a67d8;
+  }
+  
+  .about-section img {
+    transition: transform 0.4s ease;
+  }
+  
+  .about-section img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ================================
+     Features Section
+  ================================ */
+  .features-section h3 {
+    color: #5a67d8;
+  }
+  
+  .features-section .col-md-4 {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  .features-section .col-md-4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* ================================
+     How It Works
+  ================================ */
+  .how-it-works {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    border-radius: 15px;
+  }
+  
+  .how-it-works ol li {
+    margin-bottom: 10px;
+  }
+  
+  /* ================================
+     Prediction CTA Section
+  ================================ */
+  .prediction-section {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 60px 20px;
+  }
+  
+  .prediction-section .btn-success {
+    background-color: #38a169;
+    border: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .prediction-section .btn-success:hover {
+    background-color: #2f855a;
+    transform: scale(1.08);
+  }
+  
+  /* ================================
+     Utility
+  ================================ */
+  .shadow-lg {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+  }
+  

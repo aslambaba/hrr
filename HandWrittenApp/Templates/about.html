@@ -1,0 +1,116 @@
+{% extends 'Index.html' %} {% load static %} } {% block start %}
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-md-12">
+      <h1 class="display-4 text-center mb-5 text-primary">
+        <strong><b>Hand Written Recognizing: A Deep Learning Project</b></strong>
+      </h1>
+
+      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-light">
+          <h3 class="card-title mb-0">
+            Project Overview: Vision Meets Computation
+          </h3>
+        </div>
+        <div class="card-body">
+          <p class="lead">
+            This project implements a <strong>Convolutional Neural Network (CNN)</strong>to
+            perform high-accuracy recognition of handwritten digits (0-9). It
+            serves as a practical demonstration of <strong>Machine Learning</strong> and
+            <strong>Computer Vision</strong> principles.
+          </p>
+          <p>
+            The core challenge solved here is translating complex, variable
+            human penmanship into reliable, digital classifications, achieving
+            performance metrics typically exceeding 98% accuracy on standard
+            datasets like MNIST.
+          </p>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-primary text-white">
+          <h3 class="card-title mb-0">Developer Profile: Muhammad Uzair Ishfaq</h3>
+        </div>
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-3 mb-md-0">
+              <img
+                src="{% static 'Images/abc.jpg' %}"
+                class="rounded-circle border border-primary p-1"
+                alt="Muhammad Uzair Ishfaq Profile"
+                width="120"
+                height="120"
+              />
+            </div>
+
+            <div class="col-md-9">
+              <h4 class="card-title">Muhammad Uzair Ishfaq</h4>
+              <p class="text-muted mb-1">
+                Academic Background: <strong>BS in Computer Science</strong>
+              </p>
+              <p class="mb-0">
+                Core Technical Strength:<strong>Python</strong> (80% Grip)
+              </p>
+              <p class="mt-3">
+                My background in <strong>Computer Science</strong> provides the
+                necessary foundation for understanding the complex mathematical
+                and algorithmic principles behind Deep Learning. My
+                <strong>80% python grip</strong> is the driving force, enabling
+                efficient model building, training with libraries like
+                TensorFlow/Keras, and data preprocessing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+          <h3 class="card-title mb-0">Technical Deep Dive</h3>
+        </div>
+        <div class="card-body">
+          <h5>Key Technologies Utilized:</h5>
+          <ul class="list-unstyled row">
+            <li class="col-md-6 mb-2">
+              <i class="fas fa-microchip text-success me-2"></i>
+              <strong>Modeling</strong>: TensorFlow / Keras
+            </li>
+            <li class="col-md-6 mb-2">
+              <i class="fas fa-code-branch text-success me-2"></i>
+              <strong>Core Language</strong> Python (80% Proficiency)
+            </li>
+            <li class="col-md-6 mb-2">
+              <i class="fas fa-database text-success me-2"></i>
+              <strong>Dataset:</strong> MNIST (Standardized Image Data)
+            </li>
+            <li class="col-md-6 mb-2">
+              <i class="fas fa-layer-group text-success me-2"></i>
+              <strong>Architecture:</strong> CNN (Conv2D, MaxPooling, Softmax)
+            </li>
+          </ul>
+
+          <h5 class="mt-4">Python Proficiency Visualization:</h5>
+          <div class="progress" style="height: 20px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 80%"
+              aria-valuenow="80"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              Python: 80%
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center mt-4">
+        This project demonstrates the ability to transform a conceptual problem
+        into a deployed, high-performance solution.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock start %}

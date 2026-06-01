@@ -1,0 +1,75 @@
+{% extends 'Index.html' %}
+{% load static %}
+
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'Statics/profile.css' %}">
+<link rel="stylesheet" href="{% static 'Statics/static.css' %}">
+
+{% endblock linkcss %}
+
+{% block start %}
+<div class="container my-5">
+    <div class="card profile-card mx-auto shadow-lg" style="max-width: 600px;">
+        
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">Edit Your Profile</h4>
+        </div>
+
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="form-group mb-3">
+                    <label for="{{ form.full_name.id_for_label }}">
+                        {{ form.full_name.label }}
+                    </label>
+                    {{ form.full_name }}
+                    {% for error in form.full_name.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="{{ form.job_title.id_for_label }}">
+                        {{ form.job_title.label }}
+                    </label>
+                    {{ form.job_title }}
+                    {% for error in form.job_title.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="{{ form.bio.id_for_label }}">
+                        {{ form.bio.label }}
+                    </label>
+                    {{ form.bio }}
+                    {% for error in form.bio.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="{{ form.profile_picture.id_for_label }}">
+                        {{ form.profile_picture.label }}
+                    </label>
+                    {{ form.profile_picture }}
+                    {% for error in form.profile_picture.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-success px-4">
+                        Save Changes
+                    </button>
+                    <a href="{% url 'profile' %}" class="btn btn-secondary px-4">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock start %}

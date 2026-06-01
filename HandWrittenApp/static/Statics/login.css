@@ -1,0 +1,105 @@
+/* Background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, grey, white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Card */
+form {
+    max-width: 420px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: slideFade 0.8s ease;
+    padding: 30px;
+}
+
+/* Heading */
+form h3 {
+    font-weight: 700;
+    color: #5a67d8;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Labels */
+form label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input Fields */
+form input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+/* Input Focus */
+form input:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 0 0.2rem rgba(90, 103, 216, 0.25);
+    outline: none;
+}
+
+/* Error Messages */
+.errorlist {
+    list-style: none;
+    padding-left: 0;
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* Alert Box */
+.alert {
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Login Button */
+form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Button Hover */
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* Button Active */
+form button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Smooth Animation */
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(
+
+        )   
+    }
+}

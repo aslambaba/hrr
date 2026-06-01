@@ -1,0 +1,106 @@
+/* Page background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, grey, white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Signup Card */
+.card {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 18px;
+    border: none;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.8s ease;
+}
+
+/* Title */
+.card-title {
+    font-weight: 700;
+    color: #185a9d;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Labels */
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Input focus */
+.form-group input:focus {
+    border-color: #185a9d;
+    box-shadow: 0 0 0 0.2rem rgba(24, 90, 157, 0.25);
+    outline: none;
+}
+
+/* Error messages */
+.text-danger {
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* Alert box */
+.alert {
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Signup button */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Button hover */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* Login link */
+p a {
+    color: #185a9d;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

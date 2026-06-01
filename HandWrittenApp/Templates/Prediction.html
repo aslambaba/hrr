@@ -1,0 +1,90 @@
+{% extends "Index.html" %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'Statics/prediction.css' %}">
+
+{% block start %}
+<div class="row">
+  <!-- Input Section -->
+  <div class="col-sm-6">
+    <div class="card p-4">
+      <h3 class="text-center">Input</h3>
+      <form class="h-100" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="id_image" class="form-label">Upload Image</label>
+          <input type="file" class="form-control" id="id_image" name="image" required/>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Predict</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Result Section -->
+  <div class="col-sm-6">
+    <div class="card p-4">
+      <h3 class="text-center">Result</h3>
+      
+      {% if image %}
+        <div class="text-center mt-3">
+          <img src="{{ image.image.url }}" alt="Uploaded image" class="img-fluid rounded" style="max-height: 200px;" width='100px' height='100px'>
+        </div>
+      {% else %}
+        <p class="text-center text-muted">Please upload an image for prediction.</p>
+      {% endif %}
+      
+      {% if predicted_text %}
+        <p class="text-center display-4">Number: {{ predicted_text }}</p>
+        <p class="text-center text-muted">Digits: {{ predicted_digits|join:", " }}</p>
+      {% elif predicted_digit is not None %}
+        <p class="text-center display-4">Digit: {{ predicted_digit }}</p>
+        {% if accuracy %}
+          <p class="text-center text-success">Confidence: {{ accuracy }}%</p>
+        {% endif %}
+      {% elif accuracy %}
+        <p class="text-center text-success">Confidence: {{ accuracy }}%</p>
+      {% endif %}
+
+      <!-- Metrics Table -->
+    </div>
+    
+  </div>
+  <div class="table-responsive mt-4">
+    <table class="table table-bordered text-center">
+    <h3 class="text-dark mb-4 font-weight-bold text-uppercase p-3">Perfaomance of the model</h3>
+      <thead class="table-light">
+        <tr >
+          <th class="text-center text-white bg-dark">Metric</th>
+          <th class="text-center text-white bg-dark">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if overall_accuracy %}
+        <tr>
+          <td>Accuracy</td>
+          <td>{{ overall_accuracy }}</td>
+        </tr>
+        {% endif %}
+        {% if precision %}
+        <tr>
+          <td>Precision</td>
+          <td>{{ precision }}</td>
+        </tr>
+        {% endif %}
+        {% if recall %}
+        <tr>
+          <td>Recall</td>
+          <td>{{ recall }}</td>
+        </tr>
+        {% endif %}
+        {% if f1_score %}
+        <tr>
+          <td>F1 Score</td>
+          <td>{{ f1_score}}</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock start %}
